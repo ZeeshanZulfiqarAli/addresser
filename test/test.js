@@ -297,6 +297,20 @@ describe('#parseAddress', function() {
         expect(result.hasOwnProperty("zipCodePlusFour")).to.equal(false);
     });
 
+    it('should parse an address with a trailing country in lowercase', function() {
+        var result = addresser.parseAddress("300 BOYLSTON AVE, SEATTLE WA 98102, usa");
+        expect(result.streetNumber).to.equal("300");
+        expect(result.streetName).to.equal("Boylston");
+        expect(result.streetSuffix).to.equal("Ave");
+        expect(result.addressLine1).to.equal("300 Boylston Ave");
+        expect(result.hasOwnProperty("addressLine2")).to.equal(false);
+        expect(result.placeName).to.equal("Seattle");
+        expect(result.stateAbbreviation).to.equal("WA");
+        expect(result.stateName).to.equal("Washington");
+        expect(result.zipCode).to.equal("98102");
+        expect(result.hasOwnProperty("zipCodePlusFour")).to.equal(false);
+    });
+
     it('should parse a valid address for a small city not in us-cities.json file', function() {
         var result = addresser.parseAddress("5555 Duffek Dr, Kirby, TX 78219");
         expect(result.streetNumber).to.equal("5555");
