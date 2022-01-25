@@ -1,15 +1,17 @@
-addresser [![Build Status](https://travis-ci.org/moneals/addresser.svg?branch=master)](https://travis-ci.org/moneals/addresser) [![Coverage Status](https://coveralls.io/repos/github/moneals/addresser/badge.svg?branch=master)](https://coveralls.io/github/moneals/addresser?branch=master) [![npm version](https://badge.fury.io/js/addresser.svg)](https://badge.fury.io/js/addresser)
+@zeeshanz/addresser
 =========
 
 A Node.js library for parsing property addresses. Also includes other address utilities such as a function that returns a random city.
 
+This is a fork of the library by [moneals](https://github.com/moneals). You can find the original library [here](https://github.com/moneals/addresser). This fork contains essential bug fix. Details about this relese can be viewed [here](https://github.com/ZeeshanZulfiqarAli/addresser/blob/master/CHANGELOG.md).
+
 ## Installation
 
-    npm install addresser
+    npm install @zeeshanz/addresser
 
 ## Usage
 
-    var addresser = require('addresser');
+    var addresser = require('@zeeshanz/addresser');
     
     // Isn't confused by duplicate place names
     console.log(addresser.parseAddress("400 South Orange Ave, South Orange , NJ 07079"););
