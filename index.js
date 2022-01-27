@@ -91,7 +91,7 @@ var countriesHash = {
   'usa': 'United States',
   'us': 'United States',
   'united states': 'United States',
-  'unites states of america': 'United States',
+  'united states of america': 'United States',
 };
 
 module.exports = {
@@ -113,7 +113,7 @@ module.exports = {
       result.country = countriesHash[countrySection.toLowerCase()];
       addressParts.splice(-1,1);
     }
-    
+
     // Assume the last address section contains state, zip or both
     var stateString = addressParts[addressParts.length-1].trim();
     // Parse and remove zip or zip plus 4 from end of string
