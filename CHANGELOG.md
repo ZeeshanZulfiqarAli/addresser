@@ -2,7 +2,7 @@
 
 All notable changes to this fork will be documented in this file. 
 
-## 1.1.21
+## 1.2.0
 
 - Added `country` property in parsed object.
 
