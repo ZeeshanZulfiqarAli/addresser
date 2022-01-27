@@ -294,6 +294,7 @@ describe('#parseAddress', function() {
         expect(result.stateAbbreviation).to.equal("WA");
         expect(result.stateName).to.equal("Washington");
         expect(result.zipCode).to.equal("98102");
+        expect(result.country).to.equal("United States");
         expect(result.hasOwnProperty("zipCodePlusFour")).to.equal(false);
     });
 
@@ -308,6 +309,7 @@ describe('#parseAddress', function() {
         expect(result.stateAbbreviation).to.equal("WA");
         expect(result.stateName).to.equal("Washington");
         expect(result.zipCode).to.equal("98102");
+        expect(result.country).to.equal("United States");
         expect(result.hasOwnProperty("zipCodePlusFour")).to.equal(false);
     });
 
@@ -731,6 +733,7 @@ describe('#parseAddress', function() {
         expect(result.stateAbbreviation).to.equal("ON");
         expect(result.stateName).to.equal("Ontario");
         expect(result.zipCode).to.equal("M3K5K9");
+        expect(result.country).to.equal("Canada");
         expect(result.hasOwnProperty("zipCodePlusFour")).to.equal(false);
     });
 });

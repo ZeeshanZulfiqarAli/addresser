@@ -85,6 +85,15 @@ var usLine2Prefixes = {
     '#'         : '#',
 }
 
+var countriesHash = {
+  'canada': 'Canada',
+  'america': 'United States',
+  'usa': 'United States',
+  'us': 'United States',
+  'united states': 'United States',
+  'unites states of america': 'United States',
+};
+
 module.exports = {
   parseAddress: function(address) {
     // Validate a non-empty string was passed
@@ -100,8 +109,8 @@ module.exports = {
 
     // Check if the last section contains country reference (Just supports US for now)
     var countrySection = addressParts[addressParts.length-1].trim();
-    var countries = ['us', 'usa', 'united states', 'united states of america', 'canada'];
-    if (countries.includes(countrySection.toLowerCase())) {
+    if (countriesHash[countrySection.toLowerCase()]) {
+      result.country = countriesHash[countrySection.toLowerCase()];
       addressParts.splice(-1,1);
     }
     
